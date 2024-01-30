@@ -1,5 +1,13 @@
-# SSVC Reference
+# SSVC Calculator
+<style>
+.sembed {
+ min-width: 1000px;
+ min-height: 800px;
+}
+</style>
 
-!!! note "TODO: What should go here?"
-    <iframe src="findex.html"></iframe>
+<iframe src="findex.html" class="sembed"></iframe>
     
+<script>
+  console.log("Loaded");
+</script>
