@@ -10,7 +10,7 @@
 }
 </style>
 
-<iframe src="findex.html" class="sembed"></iframe>
+<iframe src="findex.html" class="sembed" style="border: 0px"></iframe>
     
 <script>
   console.log("Loaded");
