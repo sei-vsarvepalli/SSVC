@@ -35,7 +35,7 @@
   <body class="text-center whitebody">
     <img src="moon_icon.png" class="cert-tweet" alt="CERT Logo"
          onclick="$('body').toggleClass('blackbody').toggleClass('whitebody')"/>
-    <div class="tright">
+    <div class="tright" style="display:none">
       <a href="javascript:void(0)" onclick="$('#helper').show()"
 	 title="Dryad SSVC Calc App">
 	<svg height="24" width="24">
@@ -76,12 +76,17 @@
 
       <main class="inner cover">
 	<h4 class="cover-heading">
+	  <select id="graph-ungraph" class="form-control mauto"
+		  onchange="swapg(this)">
+	    <option value="Graphic">Mode: Graphic</option>
+	    <option value="Analyst">Mode: Analyst</option>		
+	  </select>	      
 	  Dryad - SSVC Calc App
-	  (<select id="tree_samples" class="form-control impselector"
+	  <select id="tree_samples_rm" class="form-control impselector"
 		   onchange="tree_process(this)">
 	    <option value="">Select</option>
 	    <option value="import">Import Tree</option>
-	  </select>)
+	  </select>
 	  
 	  <div class="cover_heading_append d-none">
 	    (CISA Coordinator v2)
@@ -125,13 +130,13 @@
 	    <tbody><tr></tr></tbody>
 	  </table>
 	</p>
-	<div id="zoomcontrol" class="graphy">
+	<div id="zoomcontrol" class="graphy" style="display:none">
 	  <div class="d-none">&#128269;</div>
 	  <input type="range" orient="vertical" alt="Zoom Graph"
 		 max="100" min="0" value="100" title="Zoom Graph"
 		 onchange="svgzoom(this)">
 	  </div>
-	<div id="graph" class="position-relative graphy">
+	<div id="graph" class="position-relative graphy" style="margin-left: 200px">
 	</div>
 	<div id="ungraph" class="position-relative d-none">
 	  <table class="table table-borderless">
@@ -150,11 +155,7 @@
 		  <a href="https://www.cisa.gov/cybersecurity"
 		     target="_blank" rel="noopener">CISA.</a> </p>
 	      </div>
-	      <select id="graph-ungraph" class="form-control mauto"
-		      onchange="swapg(this)">
-		<option value="Graphic">Mode: Graphic</option>
-		<option value="Analyst">Mode: Analyst</option>		
-	      </select>	      
+	      <div style="display:none">
 	      <button class="btn btn-dark btn-bordered d-none"
 		      onclick="$('#cvetsvload').click()">
 		Import CVE</button>
@@ -163,6 +164,7 @@
 		<option>Choose Sample CVE</option>
 		<option value="import">Import CVE</option>		
 	      </select>
+	      </div>
 	      <input type="file" onchange="readFile(this)" style="display:none"
 		     id="cvetsvload">	      
 	      <button class="btn btn-dark btn-bordered d-none"
