@@ -75,7 +75,7 @@ nav:
         Doctools: 'reference/code/doctools.md'
         Outcomes: 'reference/code/outcomes.md'
         Policy Generator: 'reference/code/policy_generator.md'
-  - Calculator: 'ssvc-calc/index.html'
+  - Calculator: 'ssvc-calc/index.md'
   - About:
     - Intro: 'about/index.md'
     - Change log: 'about/changelog.md'
